@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { count, length } from './number'; 
 
 const name = 'Anastasia';
 const flag = true;
@@ -33,6 +34,9 @@ function App() {
           {null}
           {false}
           {true}
+        </p>
+        <p>
+          count * length = { count * length }
         </p>
         <a
           className="App-link"
