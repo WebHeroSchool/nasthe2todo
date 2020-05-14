@@ -1,0 +1,10 @@
+.wrap {
+	display: flex;
+	width: 85%;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.input {
+	width: 75%;
+}

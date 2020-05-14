@@ -24,7 +24,7 @@ const App = () => {
 
 	return (<div className={styles.wrap}>
 		<div>
-  		<h1>Важные дела:</h1>
+  		<h1 className={styles.header}>Важные дела:</h1>
   		<InputItem />
   		<ItemList items={items}/>
   		<Footer count={1} />
