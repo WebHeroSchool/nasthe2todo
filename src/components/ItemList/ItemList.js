@@ -7,7 +7,7 @@ import DeleteOutlinedIcon from '@material-ui/icons/DeleteOutlined';
 
 import styles from './ItemList.module.css';
 
-const ItemList = ({ items }) => (<ul className={styles.item_list}>
+const ItemList = ({ items, onClickDone }) => (<ul className={styles.item_list}>
 	{items.map(item => 
 		(<li className={styles.todo_item} key={item.value}>
 			<FormControlLabel
@@ -15,9 +15,10 @@ const ItemList = ({ items }) => (<ul className={styles.item_list}>
         	<Checkbox 
         		checked={item.isDone}
         		color="default"  
+        		onClick={() => onClickDone(item.isDone)}
         	/>
         }
-        label=<Item value={item.value} isDone={item.isDone}/>
+        label=<Item value={item.value} isDone={item.isDone} />
       />
 			<DeleteOutlinedIcon />
 		</li>)
