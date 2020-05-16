@@ -9,13 +9,16 @@ const App = () => {
 
 	const items = [
 		{
-			value: 'Встреча с клиентом'
+			value: 'Встреча с клиентом',
+			isDone: true
 		},
 		{
-  		value: 'Подпись договора'
+  		value: 'Подпись договора',
+  		isDone: true
   	},
   	{
-  		value: 'Урок английского'
+  		value: 'Урок английского',
+  		isDone: false
   	}
 	];
 
@@ -24,7 +27,7 @@ const App = () => {
   		<h1>Важные дела:</h1>
   		<InputItem />
   		<ItemList items={items}/>
-  		<Footer count={3} />
+  		<Footer count={1} />
   	</div>
 	</div>)
 };
