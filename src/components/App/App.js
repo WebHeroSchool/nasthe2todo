@@ -2,7 +2,7 @@ import React from 'react';
 import InputItem from '../InputItem/InputItem';
 import ItemList from '../ItemList/ItemList';
 import Footer from '../Footer/Footer';
-import './App.css';
+import styles from './App.module.css';
 
 
 const App = () => {
@@ -19,7 +19,7 @@ const App = () => {
   	}
 	];
 
-	return (<div className='wrap'>
+	return (<div className={styles.wrap}>
 		<div>
   		<h1>Важные дела:</h1>
   		<InputItem />
