@@ -11,20 +11,38 @@ class App extends React.Component {
 		items: [
 			{
 				value: 'Встреча с клиентом',
-				isDone: true
+				isDone: true,
+				id: 1
 			},
 			{
 				value: 'Подпись договора',
-				isDone: true
+				isDone: true,
+				id: 2
 			},
 			{
 				value: 'Урок английского',
-				isDone: false
+				isDone: false,
+				id: 3
 			}
 		]
 	};
 
-	onClickDone = isDone => console.log(isDone);
+
+	onClickDone = id => {
+		const newItemList = this.state.items.map(item => {
+			const newItem = { ...item };
+
+			if (item.id === id) {
+				newItem.isDone = !item.isDone;
+			}
+
+			return newItem;
+
+		});
+
+		this.setState({ items: newItemList });
+
+	};
 
   render() {
     return (
