@@ -5,11 +5,17 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import DeleteOutlinedIcon from '@material-ui/icons/DeleteOutlined';
 
+import classnames from 'classnames';
 import styles from './ItemList.module.css';
 
-const ItemList = ({ items, onClickDone, id }) => (<ul className={styles.item_list}>
+const ItemList = ({ items, onClickDone, id, onClickDelete }) => (<ul className={styles.item_list}>
 	{items.map(item => 
-		(<li className={styles.todo_item} key={item.value}>
+		(<li className={
+                classnames({
+                    [styles.todo_item]: true,
+                    [styles.deleted]: item.isDeleted
+                })}
+             key={item.value}>
 			<FormControlLabel
         control={
         	<Checkbox 
@@ -22,9 +28,10 @@ const ItemList = ({ items, onClickDone, id }) => (<ul className={styles.item_lis
         	value={item.value} 
         	isDone={item.isDone} 
         	id={item.id}
+            isDeleted={item.isDeleted}
         />
       />
-			<DeleteOutlinedIcon />
+			<DeleteOutlinedIcon onClick={() => onClickDelete(item.id)} />
 		</li>)
 	)}
 </ul>);
