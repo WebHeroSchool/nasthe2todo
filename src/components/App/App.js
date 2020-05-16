@@ -60,23 +60,23 @@ class App extends React.Component {
 		});
 
 		this.setState({ items: newItemList });
-
 	};
 
   render() {
-  	 return (
+  	return (
     	<div className={styles.wrap}>
-			<div>
-  				<h1 className={styles.header}>Важные дела:</h1>
-  				<InputItem />
-  				<ItemList
-					items={this.state.items}
-					onClickDone={this.onClickDone}
-					onClickDelete={this.onClickDelete}
-				/>
-  				<Footer count={1} />
-  			</div>
-		</div>);
+				<div>
+					<h1 className={styles.header}>Важные дела:</h1>
+					<InputItem />
+					<ItemList
+						items={this.state.items}
+						onClickDone={this.onClickDone}
+						onClickDelete={this.onClickDelete}
+					/>
+	  			<Footer count={1} />
+	  		</div>
+			</div>
+		);
 	}
 };
 

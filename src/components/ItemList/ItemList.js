@@ -8,32 +8,34 @@ import DeleteOutlinedIcon from '@material-ui/icons/DeleteOutlined';
 import classnames from 'classnames';
 import styles from './ItemList.module.css';
 
-const ItemList = ({ items, onClickDone, id, onClickDelete }) => (<ul className={styles.item_list}>
-	{items.map(item => 
-		(<li className={
-                classnames({
-                    [styles.todo_item]: true,
-                    [styles.deleted]: item.isDeleted
-                })}
-             key={item.value}>
+const ItemList = ({ items, onClickDone, id, onClickDelete }) => (
+	<ul className={styles.item_list}>
+		{items.map(item => (
+		<li className={
+			classnames({
+				[styles.todo_item]: true,
+				[styles.deleted]: item.isDeleted
+			})}
+			key={item.value}>
 			<FormControlLabel
-        control={
-        	<Checkbox 
-        		checked={item.isDone}
-        		color="default"  
-        		onClick={() => onClickDone(item.id)}
-        	/>
-        }
-        label=<Item 
-        	value={item.value} 
-        	isDone={item.isDone} 
-        	id={item.id}
-            isDeleted={item.isDeleted}
-        />
-      />
+				control={
+					<Checkbox 
+						checked={item.isDone}
+						color="default"  
+						onClick={() => onClickDone(item.id)}
+					/>
+				}
+				label=<Item 
+								value={item.value} 
+								isDone={item.isDone} 
+								id={item.id}
+								isDeleted={item.isDeleted}
+							/>
+			/>
 			<DeleteOutlinedIcon onClick={() => onClickDelete(item.id)} />
-		</li>)
-	)}
-</ul>);
+		</li>
+		))}
+	</ul>
+);
 
 export default ItemList;
