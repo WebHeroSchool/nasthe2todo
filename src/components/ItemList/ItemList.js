@@ -13,7 +13,7 @@ const ItemList = ({ items, onClickDone, id, onClickDelete }) => (
 		{items.map(item => (
 			<li 
 				className={styles.todo_item}
-				key={item.value}>
+				key={item.id}>
 				<FormControlLabel
 					control={
 						<Checkbox 
