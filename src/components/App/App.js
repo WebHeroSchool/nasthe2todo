@@ -24,8 +24,7 @@ class App extends React.Component {
 				isDone: false,
 				id: 3,
 			}
-		],
-		count: 3
+		]
 	};
 
 	onClickAdd = value => this.setState(state => ({
@@ -34,10 +33,9 @@ class App extends React.Component {
 			{
 				value,
 				isDone: false,
-				id: state.count + 1
+				id: state.items.length + 1
 			}
-		],
-		count: state.count + 1
+		]
 	}));
 
 
@@ -70,7 +68,7 @@ class App extends React.Component {
 						onClickDone={this.onClickDone}
 						onClickDelete={this.onClickDelete}
 					/>
-	  			<Footer count={1} />
+	  			<Footer count={this.state.items.length} />
 	  		</div>
 			</div>
 		);
