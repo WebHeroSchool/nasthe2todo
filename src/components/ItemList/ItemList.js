@@ -18,7 +18,7 @@ const ItemList = ({ items, onClickDone, id, onClickDelete }) => (
 					control={
 						<Checkbox 
 							checked={item.isDone}
-							color="default"  
+							color='default'  
 							onClick={() => onClickDone(item.id)}
 						/>
 					}
