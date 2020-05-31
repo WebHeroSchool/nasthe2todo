@@ -12,17 +12,17 @@ class App extends React.Component {
 			{
 				value: 'Встреча с клиентом',
 				isDone: true,
-				id: 1,
+				id: 1
 			},
 			{
 				value: 'Подпись договора',
 				isDone: true,
-				id: 2,
+				id: 2
 			},
 			{
 				value: 'Урок английского',
 				isDone: false,
-				id: 3,
+				id: 3
 			}
 		]
 	};
