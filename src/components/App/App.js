@@ -12,17 +12,20 @@ class App extends React.Component {
 			{
 				value: 'Встреча с клиентом',
 				isDone: true,
-				id: 1
+				id: 1,
+				isDeleted: false
 			},
 			{
 				value: 'Подпись договора',
 				isDone: true,
-				id: 2
+				id: 2,
+				isDeleted: false
 			},
 			{
 				value: 'Урок английского',
 				isDone: false,
-				id: 3
+				id: 3,
+				isDeleted: false
 			}
 		]
 	};
@@ -44,16 +47,23 @@ class App extends React.Component {
 
 	};
 
+	onClickDelete = id => this.setState(state => ({items: state.items.filter(item => item.id !== id)}));
+
   render() {
-    return (
+  	return (
     	<div className={styles.wrap}>
 				<div>
-  				<h1 className={styles.header}>Важные дела:</h1>
-  				<InputItem />
-  				<ItemList items={this.state.items} onClickDone={this.onClickDone} />
-  				<Footer count={1} />
-  			</div>
-			</div>);	
+					<h1 className={styles.header}>Важные дела:</h1>
+					<InputItem />
+					<ItemList
+						items={this.state.items}
+						onClickDone={this.onClickDone}
+						onClickDelete={this.onClickDelete}
+					/>
+	  			<Footer count={1} />
+	  		</div>
+			</div>
+		);
 	}
 };
 
