@@ -13,22 +13,30 @@ class App extends React.Component {
 				value: 'Встреча с клиентом',
 				isDone: true,
 				id: 1,
-				isDeleted: false
 			},
 			{
 				value: 'Подпись договора',
 				isDone: true,
 				id: 2,
-				isDeleted: false
 			},
 			{
 				value: 'Урок английского',
 				isDone: false,
 				id: 3,
-				isDeleted: false
 			}
 		]
 	};
+
+	onClickAdd = value => this.setState(state => ({
+		items:[
+			...state.items,
+			{
+				value,
+				isDone: false,
+				id: state.items.length + 1
+			}
+		]
+	}));
 
 
 	onClickDone = id => {
@@ -54,13 +62,13 @@ class App extends React.Component {
     	<div className={styles.wrap}>
 				<div>
 					<h1 className={styles.header}>Важные дела:</h1>
-					<InputItem />
+					<InputItem onClickAdd={this.onClickAdd} />
 					<ItemList
 						items={this.state.items}
 						onClickDone={this.onClickDone}
 						onClickDelete={this.onClickDelete}
 					/>
-	  			<Footer count={1} />
+	  			<Footer count={this.state.items.length} />
 	  		</div>
 			</div>
 		);

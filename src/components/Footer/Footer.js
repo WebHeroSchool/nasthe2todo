@@ -1,5 +1,5 @@
 import React from 'react';
 
-const Footer = ({ count }) => (<footer>Вот столько дел еще осталось сделать: {count}</footer>);
+const Footer = ({ count }) => (<footer>Количество задач: {count}</footer>);
 
 export default Footer;
