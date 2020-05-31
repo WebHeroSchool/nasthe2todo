@@ -4,6 +4,7 @@ import TextField from '@material-ui/core/TextField';
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
 
+import PropTypes from 'prop-types';
 import styles from './InputItem.module.css';
 
 
@@ -50,9 +51,11 @@ class InputItem extends React.Component {
   		</Fab>
 			</p>
 		)
-
 	}
 }
 
+InputItem.propTypes = {
+	onClickAdd: PropTypes.func.isRequired
+};
 
 export default InputItem;

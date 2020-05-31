@@ -5,6 +5,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import DeleteOutlinedIcon from '@material-ui/icons/DeleteOutlined';
 
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import styles from './ItemList.module.css';
 
@@ -34,5 +35,12 @@ const ItemList = ({ items, onClickDone, id, onClickDelete }) => (
 		))}
 	</ul>
 );
+
+ItemList.propTypes = {
+	items: PropTypes.array,
+	id: PropTypes.number,
+	onClickDone: PropTypes.func.isRequired,
+	onClickDelete: PropTypes.func.isRequired
+};
 
 export default ItemList;
