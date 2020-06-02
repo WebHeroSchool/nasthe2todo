@@ -35,8 +35,8 @@ class InputItem extends React.Component {
 		return(
 			<p className={styles.wrap}>
 				<TextField className={styles.input}
-					id="standard-basic" 
-					label="Новое дело" 
+					id='standard-basic' 
+					label='Новое дело' 
 					value={this.state.inputValue.toUpperCase()}
 					onChange={event => this.setState({ 
 						inputValue: event.target.value,
@@ -46,7 +46,7 @@ class InputItem extends React.Component {
 					helperText={this.state.helperText}
           error={this.state.error}
 				/>
-			<Fab size="small" color="secondary" aria-label="add">
+			<Fab size='small' color='secondary' aria-label='add'>
     		<AddIcon onClick={this.onButtonClick} />
   		</Fab>
 			</p>
