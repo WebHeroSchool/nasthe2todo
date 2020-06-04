@@ -8,15 +8,13 @@ import styles from './Item.module.css';
 class Item extends React.Component {
 
 	componentDidMount() {
-		console.log('Component did mount');
-	}
-
-	componentDidUpdate() {
-		console.log('Component did update');
+		console.log('Component did mount!');
+		this.timerID = setInterval(() => console.log('Interval has been set!'), 1000);
 	}
 
 	componentWillUnmount() {
-		console.log('Component will unmount');
+		clearInterval(this.timerID);
+		console.log('Memory leak neutralized!');
 	}
 
 	render() {
