@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import styles from './ItemList.module.css';
 
-const ItemList = ({ items, onClickDone, id, onClickDelete }) => (
+const ItemList = ({ items, onClickDone, onClickDelete }) => (
 	<ul className={styles.item_list}>
 		{items.map(item => (
 			<li 

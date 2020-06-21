@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import InputItem from '../InputItem/InputItem';
 import ItemList from '../ItemList/ItemList';
 import Footer from '../Footer/Footer';
@@ -26,7 +26,15 @@ const App = () => {
 		]
 	};
 
-	const [items, setTodoItem] = useState(initialState.items); 
+	const [items, setItemList] = useState(initialState.items); 
+
+	useEffect(() => {
+		console.log('componentDidMount');
+	}, []);
+	
+	useEffect(() => {
+		console.log('componentDidUpdate');
+  });
 
 	const onClickAdd = value => {
 		const newItemList = [
@@ -37,7 +45,7 @@ const App = () => {
 				id: items.length + 1
 			}
 		];
-		setTodoItem(newItemList);
+		setItemList(newItemList);
 	};
 
 	const onClickDone = id => {
@@ -48,12 +56,12 @@ const App = () => {
 			}
 			return newItem;
 		});
-		setTodoItem(newItemList);
+		setItemList(newItemList);
 	};
 
 	const onClickDelete = id => {
 		const newItemList = items.filter(item => item.id !== id)
-		setTodoItem(newItemList);
+		setItemList(newItemList);
 	};
 
 	return (
