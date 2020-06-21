@@ -5,7 +5,6 @@
 	font-family: Helvetica;
 }
 
-.link {
-	color: #000;
-	text-decoration: none;
+.header {
+	font-weight: 500;
 }
