@@ -20,7 +20,7 @@ class InputItem extends React.Component {
 			this.setState({
 				inputValue: ''
 			});
-			this.props.onClickAdd(this.state.inputValue.toUpperCase());
+			this.props.onClickAdd(this.state.inputValue);
 		} else {
 			this.setState({
 				helperText: 'Задание не может быть пустым!', 
@@ -37,7 +37,7 @@ class InputItem extends React.Component {
 				<TextField className={styles.input}
 					id='standard-basic' 
 					label='Новое дело' 
-					value={this.state.inputValue.toUpperCase()}
+					value={this.state.inputValue}
 					onChange={event => this.setState({ 
 						inputValue: event.target.value,
 						helperText: '',
