@@ -65,8 +65,7 @@ const Todo = () => {
 	};
 
 	return ( 	
-		<div>
-			<h1 className={styles.header}>Важные дела:</h1>
+		<div className={styles.wrap}>
 			<InputItem onClickAdd={onClickAdd} />
 			<ItemList
 				items={items}
@@ -77,7 +76,6 @@ const Todo = () => {
   	</div>
 	);
 }
-
 
 
 export default Todo;

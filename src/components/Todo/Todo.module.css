@@ -1,10 +1,8 @@
 .wrap {
-	display: flex;
-	width: 100%;
-	justify-content: center;
+	padding: 15px;
 	font-family: Helvetica;
 }
 
-.header {
-	font-weight: 500;
+p {
+	margin: 0;
 }

@@ -8,7 +8,10 @@ const About = () => (
   <Card>
     <CardContent>
       <Typography variant="h5">
-        About
+        Обо мне
+      </Typography>
+      <Typography variant="h5">
+        Контакты
       </Typography>
     </CardContent>
   </Card>

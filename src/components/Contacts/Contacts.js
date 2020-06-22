@@ -8,7 +8,7 @@ const Contacts = () => (
   <Card>
     <CardContent>
       <Typography variant="h5">
-        Contacts
+        Контакты
       </Typography>
     </CardContent>
   </Card>
