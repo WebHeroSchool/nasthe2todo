@@ -6,31 +6,31 @@ import styles from './Item.module.css';
 
 
 class Item extends React.Component {
-	render() {
+  render() {
 
-		const { value, isDone } = this.props;
+    const { value, isDone } = this.props;
 
-		return(
-			<span className={
-				classnames({
-					[styles.item]: true,
-					[styles.done]: isDone
-				})
-			}> 
-				{value}
-			</span>
-		);
-	}
+    return(
+      <span className={
+        classnames({
+          [styles.item]: true,
+          [styles.done]: isDone
+        })
+      }> 
+        {value}
+      </span>
+    );
+  }
 }
 
 
 Item.defaultProps = {
-	isDone: false
+  isDone: false
 };
 
 Item.propTypes = {
-	value: PropTypes.string.isRequired,
-	isDone: PropTypes.bool.isRequired
+  value: PropTypes.string.isRequired,
+  isDone: PropTypes.bool.isRequired
 };
 
 export default Item;
