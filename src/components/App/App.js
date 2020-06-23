@@ -11,18 +11,18 @@ import Todo from '../Todo/Todo';
 import styles from './App.module.css';
 
 const App = () => (
-	<Router>
-		<div className={styles.app}>
-			<MenuList className={styles.menu}>
+  <Router>
+    <div className={styles.app}>
+      <MenuList className={styles.menu}>
         <Link to='/' className={styles.link}><MenuItem style={{fontSize: "26px"}}>Обо мне</MenuItem></Link>
         <Link to='/todo' className={styles.link}><MenuItem style={{fontSize: "26px"}}>Дела</MenuItem></Link>
       </MenuList>
-			<Card> 
+      <Card> 
         <Route path='/' exact component={About} />
         <Route path='/todo' component={Todo} />
       </Card>
     </div>
-	</Router>
+  </Router>
 );
 
 export default App;
