@@ -9,32 +9,32 @@ import PropTypes from 'prop-types';
 import styles from './ItemList.module.css';
 
 const ItemList = ({ items, onClickDone, onClickDelete }) => (
-	<ul className={styles.item_list}>
-	{items.map(item => (
-		<li 
-			className={styles.todo_item}
-			key={item.id}>
-			<FormControlLabel
-				control={
-					<Checkbox 
-						checked={item.isDone}
-						color='default'  
-						onClick={() => onClickDone(item.id)}
-					/>
-				}
-				label={
-					<Item 
-						value={item.value} 
-						isDone={item.isDone} 
-						id={item.id}
-						isDeleted={item.isDeleted}
-					/>
-				}
-			/>
-			<DeleteOutlinedIcon onClick={() => onClickDelete(item.id)} />
-		</li>
-	))}
-	</ul>
+  <ul className={styles.item_list}>
+  {items.map(item => (
+    <li 
+      className={styles.todo_item}
+      key={item.id}>
+      <FormControlLabel
+        control={
+          <Checkbox 
+            checked={item.isDone}
+            color='default'  
+            onClick={() => onClickDone(item.id)}
+          />
+        }
+        label={
+          <Item 
+            value={item.value} 
+            isDone={item.isDone} 
+            id={item.id}
+            isDeleted={item.isDeleted}
+          />
+        }
+      />
+    <DeleteOutlinedIcon onClick={() => onClickDelete(item.id)} />
+    </li>
+  ))}
+  </ul>
 );
 
 ItemList.propTypes = {

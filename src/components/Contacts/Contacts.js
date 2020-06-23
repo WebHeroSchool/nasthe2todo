@@ -5,13 +5,13 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 
 const Contacts = () => (
-	<Card>
-		<CardContent>
-			<Typography variant="h5">
-				Контакты
-			</Typography>
-		</CardContent>
-	</Card>
+  <Card>
+    <CardContent>
+      <Typography variant="h5">
+        Контакты
+      </Typography>
+    </CardContent>
+  </Card>
 );
 
 export default Contacts;
