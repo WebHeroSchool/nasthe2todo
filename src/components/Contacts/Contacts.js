@@ -1,17 +1,10 @@
 import React from 'react';
 
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
+import styles from './Contacts.module.css';
+
 
 const Contacts = () => (
-  <Card>
-    <CardContent>
-      <Typography variant="h5">
-        Контакты
-      </Typography>
-    </CardContent>
-  </Card>
+  <h5 className={styles.contactsHeader}>Контакты</h5>
 );
 
 export default Contacts;

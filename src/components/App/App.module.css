@@ -1,11 +1,16 @@
 .app {
 	width: 35%;
-	margin: 0 auto;
+  margin: 0 auto;
+  font-family: Helvetica;
 }
 
 .menu {
 	display: flex;
-	justify-content: space-around;
+  justify-content: space-around;
+}
+
+.menu:focus {
+  outline: none;
 }
 
 .menu > a {
