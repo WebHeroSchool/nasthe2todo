@@ -1,3 +1,11 @@
+.wrap {
+  font-size: 20px;
+}
+
+.error {
+  color: red;
+}
+
 .repoHeader {
   margin: 0;
   padding: 0;
