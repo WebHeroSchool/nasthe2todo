@@ -1,11 +1,11 @@
 .app {
-	width: 35%;
+  width: 35%;
   margin: 0 auto;
   font-family: Helvetica;
 }
 
 .menu {
-	display: flex;
+  display: flex;
   justify-content: space-around;
 }
 
@@ -14,21 +14,21 @@
 }
 
 .menu > a {
-	display: inline-block;
+  display: inline-block;
 }
 
 .menu > a > li:hover {
-	color: #f50057;
-	background-color: #fff;
-	border: 3px solid #f50057;
-	border-radius: 4px;
-	padding: 3px 13px 3px 13px;
-	box-sizing: border-box;
+  color: #f50057;
+  background-color: #fff;
+  border: 3px solid #f50057;
+  border-radius: 4px;
+  padding: 3px 13px 3px 13px;
+  box-sizing: border-box;
 }
 
 .link {
-	color: #000;
-	text-decoration: none;
+  color: #000;
+  text-decoration: none;
 }
 
 

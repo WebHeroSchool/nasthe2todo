@@ -22,21 +22,21 @@ class About extends React.Component{
       .listForUser({
         username: 'nasthe2'
       })
-      .then(({ data }) => {
+      .then(({ data }) => (
         this.setState({
           repoList: data,
           isLoading: false,
           avatarUrl: data[0].owner.avatar_url,
           login: data[0].owner.login
         })
-      })
-      .catch(err => 
+      ))
+      .catch(err => (
         this.setState({
           requestFailed: true,
           isLoading: false,
           error: err
         })
-      )
+      ));
   }
 
   render() {
