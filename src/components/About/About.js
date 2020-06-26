@@ -55,33 +55,33 @@ class About extends React.Component{
           { isLoading && <CircularProgress /> }
           
           {
-            !isLoading && repoList.length ?
-              <div>
-                <Avatar
-                  alt={repoList.username}
-                  src={avatarUrl}
-                />
-                <h5>{login}</h5>
-              </div>
-            :
-              <div></div>
+            !isLoading && repoList.length
+              ? (
+                <div>
+                  <Avatar
+                    alt={repoList.username}
+                    src={avatarUrl}
+                  />
+                  <h5>{login}</h5>
+                </div>
+              ) : null
           }
 
           {
-            !isLoading && repoList.length ?
-              <ul>
-                {
-                  repoList.map(repo => (
-                    <li key={repo.id}>
-                      <a href={repo.html_url} className={styles.link}>
-                        {repo.name}
-                      </a>
-                    </li>
-                  ))
-                }
-              </ul>
-            :
-              <div></div>
+            !isLoading && repoList.length 
+              ? (
+                <ul>
+                  {
+                    repoList.map(repo => (
+                      <li key={repo.id}>
+                        <a href={repo.html_url} className={styles.link}>
+                          {repo.name}
+                        </a>
+                      </li>
+                    ))
+                  }
+                </ul>
+              ) : null
           }
           
         </CardContent>
